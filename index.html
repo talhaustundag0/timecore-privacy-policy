@@ -5,71 +5,259 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – TimeCore</title>
   <style>
+    :root {
+      --primary-bg: #121212;
+      --secondary-bg: #1E1E1E;
+      --primary-accent: #4FD1C5;
+      --text-primary: #FFFFFF;
+      --text-secondary: #B0B0B0;
+      --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
     body {
-      font-family: sans-serif;
-      background-color: #121212;
-      color: white;
-      max-width: 700px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
     }
-
-    h1, h2 {
-      color: #4FD1C5;
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
     }
-
-    a {
-      color: #4FD1C5;
-      text-decoration: none;
+    
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-
-    a:hover {
-      text-decoration: underline;
+    
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary-accent);
+      letter-spacing: -0.5px;
     }
-
+    
+    .tagline {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-accent);
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+    
+    h1:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: var(--primary-accent);
+      border-radius: 4px;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .policy-card {
+      background: var(--secondary-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .policy-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .policy-card h2 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .policy-card h2 svg {
+      margin-right: 0.8rem;
+      color: var(--primary-accent);
+    }
+    
     strong {
-      color: #4FD1C5;
+      color: var(--primary-accent);
+      font-weight: 600;
     }
-
+    
+    a {
+      color: var(--primary-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border-bottom: 1px dotted transparent;
+    }
+    
+    a:hover {
+      border-bottom-color: var(--primary-accent);
+    }
+    
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.8rem 1.5rem;
+      background: rgba(79, 209, 197, 0.1);
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    
+    .contact-link:hover {
+      background: rgba(79, 209, 197, 0.2);
+    }
+    
+    .contact-link svg {
+      margin-right: 0.5rem;
+    }
+    
+    .effective-date {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .policy-card {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    
+    .policy-card:nth-child(1) { animation-delay: 0.1s; }
+    .policy-card:nth-child(2) { animation-delay: 0.2s; }
+    .policy-card:nth-child(3) { animation-delay: 0.3s; }
+    .policy-card:nth-child(4) { animation-delay: 0.4s; }
+    .policy-card:nth-child(5) { animation-delay: 0.5s; }
+    .policy-card:nth-child(6) { animation-delay: 0.6s; }
+    
     /* Responsive Design */
     @media (max-width: 768px) {
-      body {
-        padding: 15px;
+      .container {
+        padding: 1.5rem;
       }
+      
+      .logo {
+        font-size: 2rem;
+      }
+      
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
-      h2 {
-        font-size: 1.25rem;
-      }
-      p {
-        font-size: 1rem;
+      
+      .policy-card {
+        padding: 1.5rem;
       }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Privacy Policy – TimeCore: Essential Focus, Zero Distraction</h1>
-  <p><strong>Effective Date:</strong> May 8, 2025</p>
-  
-  <h2>Data Collection and Storage</h2>
-  <p>The App does <strong>not collect or store any personal data</strong> on external servers.</p>
-  <p>All data is stored <strong>locally</strong> on your device using secure storage (AsyncStorage).</p>
-
-  <h2>Notifications</h2>
-  <p>The App may request permission to send you reminder notifications. These are <strong>optional</strong> and not tracked.</p>
-
-  <h2>No Internet Tracking</h2>
-  <p>No tracking, analytics, or advertising tools are used. Internet is not required for core functionality.</p>
-
-  <h2>Security</h2>
-  <p>All data remains on your device and is not shared externally.</p>
-
-  <h2>Contact</h2>
-  <p>If you have questions, contact us at: <a href="mailto:talhaustundag09@gmail.com">talhaustundag09@gmail.com</a></p>
-
-  <h2>Changes to This Policy</h2>
-  <p>We may update this policy in the future. Updates will be reflected on this page.</p>
+  <div class="container">
+    <header>
+      <div class="logo">TimeCore</div>
+      <div class="tagline">Essential Focus, Zero Distraction</div>
+      <h1>Privacy Policy</h1>
+      <div class="effective-date"><strong>Effective Date:</strong> May 8, 2025</div>
+    </header>
+    
+    <main>
+      <div class="policy-card">
+        <h2>
+          <i class="fas fa-database"></i>
+          Data Collection and Storage
+        </h2>
+        <p>The App does <strong>not collect or store any personal data</strong> on external servers.</p>
+        <p>All data is stored <strong>locally</strong> on your device using secure storage (AsyncStorage).</p>
+      </div>
+      
+      <div class="policy-card">
+        <h2>
+          <i class="fas fa-bell"></i>
+          Notifications
+        </h2>
+        <p>The App may request permission to send you reminder notifications. These are <strong>optional</strong> and not tracked.</p>
+      </div>
+      
+      <div class="policy-card">
+        <h2>
+          <i class="fas fa-wifi-slash"></i>
+          No Internet Tracking
+        </h2>
+        <p>No tracking, analytics, or advertising tools are used. Internet is not required for core functionality.</p>
+      </div>
+      
+      <div class="policy-card">
+        <h2>
+          <i class="fas fa-shield-alt"></i>
+          Security
+        </h2>
+        <p>All data remains on your device and is not shared externally.</p>
+      </div>
+      
+      <div class="policy-card">
+        <h2>
+          <i class="fas fa-envelope"></i>
+          Contact
+        </h2>
+        <p>If you have questions about our privacy practices, please contact us:</p>
+        <a href="mailto:talhaustundag09@gmail.com" class="contact-link">
+          <i class="fas fa-paper-plane"></i>
+          talhaustundag09@gmail.com
+        </a>
+      </div>
+      
+      <div class="policy-card">
+        <h2>
+          <i class="fas fa-sync-alt"></i>
+          Changes to This Policy
+        </h2>
+        <p>We may update this policy in the future. Any changes will be reflected on this page with an updated effective date.</p>
+      </div>
+    </main>
+    
+    <footer>
+      &copy; 2025 TimeCore. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
